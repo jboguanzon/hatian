@@ -1,0 +1,19 @@
+{
+  "name": "db",
+  "packageManager": "yarn@4.0.2",
+  "scripts": {
+    "with-env": "dotenv -e ../../.env --",
+    "drizzle:generate": "yarn with-env drizzle-kit generate:pg",
+    "drizzle:migrate": "yarn with-env tsx ./migrate.ts"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.29.3",
+    "postgres": "^3.4.3"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^7.3.0",
+    "drizzle-kit": "^0.20.12",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
